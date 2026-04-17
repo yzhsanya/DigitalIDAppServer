@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("GovDigitalApp.API")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+852a14eb9521252d76586675c24de84e45a9ecad")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c57948088925c69e9fcb9598b648a31aa687bce9")]
 [assembly: System.Reflection.AssemblyProductAttribute("GovDigitalApp.API")]
 [assembly: System.Reflection.AssemblyTitleAttribute("GovDigitalApp.API")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

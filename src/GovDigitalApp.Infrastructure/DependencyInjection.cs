@@ -23,12 +23,22 @@ public static class DependencyInjection
         Action<DbContextOptionsBuilder>? dbContextOptions = null)
     {
         if (dbContextOptions != null)
+        {
             services.AddDbContext<AppDbContext>(dbContextOptions);
+        }
         else
+        {
+            var isRailway = !string.IsNullOrEmpty(Environment.GetEnvironmentVariable("RAILWAY_ENVIRONMENT"));
             services.AddDbContext<AppDbContext>(options =>
-                options
-                    .UseSqlServer(configuration.GetConnectionString("DefaultConnection"))
-                    .ConfigureWarnings(w => w.Ignore(RelationalEventId.PendingModelChangesWarning)));
+            {
+                if (isRailway)
+                    options.UseSqlite("Data Source=/tmp/govdigitalapp.db")
+                           .ConfigureWarnings(w => w.Ignore(RelationalEventId.PendingModelChangesWarning));
+                else
+                    options.UseSqlServer(configuration.GetConnectionString("DefaultConnection"))
+                           .ConfigureWarnings(w => w.Ignore(RelationalEventId.PendingModelChangesWarning));
+            });
+        }
 
         services.AddScoped<IAppDbContext>(provider => provider.GetRequiredService<AppDbContext>());
         services.AddScoped<IJwtService, JwtService>();
