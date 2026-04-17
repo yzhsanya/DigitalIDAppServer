@@ -1,0 +1,11 @@
+C:\Users\uzhva\RiderProjects\DigitalIDAppServer\src\GovDigitalApp.Domain\bin\Debug\net10.0\GovDigitalApp.Domain.deps.json
+C:\Users\uzhva\RiderProjects\DigitalIDAppServer\src\GovDigitalApp.Domain\bin\Debug\net10.0\GovDigitalApp.Domain.dll
+C:\Users\uzhva\RiderProjects\DigitalIDAppServer\src\GovDigitalApp.Domain\bin\Debug\net10.0\GovDigitalApp.Domain.pdb
+C:\Users\uzhva\RiderProjects\DigitalIDAppServer\src\GovDigitalApp.Domain\obj\Debug\net10.0\GovDigitalApp.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\uzhva\RiderProjects\DigitalIDAppServer\src\GovDigitalApp.Domain\obj\Debug\net10.0\GovDigitalApp.Domain.AssemblyInfoInputs.cache
+C:\Users\uzhva\RiderProjects\DigitalIDAppServer\src\GovDigitalApp.Domain\obj\Debug\net10.0\GovDigitalApp.Domain.AssemblyInfo.cs
+C:\Users\uzhva\RiderProjects\DigitalIDAppServer\src\GovDigitalApp.Domain\obj\Debug\net10.0\GovDigitalApp.Domain.csproj.CoreCompileInputs.cache
+C:\Users\uzhva\RiderProjects\DigitalIDAppServer\src\GovDigitalApp.Domain\obj\Debug\net10.0\GovDigitalApp.Domain.dll
+C:\Users\uzhva\RiderProjects\DigitalIDAppServer\src\GovDigitalApp.Domain\obj\Debug\net10.0\refint\GovDigitalApp.Domain.dll
+C:\Users\uzhva\RiderProjects\DigitalIDAppServer\src\GovDigitalApp.Domain\obj\Debug\net10.0\GovDigitalApp.Domain.pdb
+C:\Users\uzhva\RiderProjects\DigitalIDAppServer\src\GovDigitalApp.Domain\obj\Debug\net10.0\ref\GovDigitalApp.Domain.dll

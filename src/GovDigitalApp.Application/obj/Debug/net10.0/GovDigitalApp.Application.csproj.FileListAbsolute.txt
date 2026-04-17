@@ -1,0 +1,15 @@
+C:\Users\uzhva\RiderProjects\DigitalIDAppServer\src\GovDigitalApp.Application\bin\Debug\net10.0\GovDigitalApp.Application.deps.json
+C:\Users\uzhva\RiderProjects\DigitalIDAppServer\src\GovDigitalApp.Application\bin\Debug\net10.0\GovDigitalApp.Application.dll
+C:\Users\uzhva\RiderProjects\DigitalIDAppServer\src\GovDigitalApp.Application\bin\Debug\net10.0\GovDigitalApp.Application.pdb
+C:\Users\uzhva\RiderProjects\DigitalIDAppServer\src\GovDigitalApp.Application\bin\Debug\net10.0\GovDigitalApp.Domain.dll
+C:\Users\uzhva\RiderProjects\DigitalIDAppServer\src\GovDigitalApp.Application\bin\Debug\net10.0\GovDigitalApp.Domain.pdb
+C:\Users\uzhva\RiderProjects\DigitalIDAppServer\src\GovDigitalApp.Application\obj\Debug\net10.0\GovDigitalApp.Application.csproj.AssemblyReference.cache
+C:\Users\uzhva\RiderProjects\DigitalIDAppServer\src\GovDigitalApp.Application\obj\Debug\net10.0\GovDigitalApp.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\uzhva\RiderProjects\DigitalIDAppServer\src\GovDigitalApp.Application\obj\Debug\net10.0\GovDigitalApp.Application.AssemblyInfoInputs.cache
+C:\Users\uzhva\RiderProjects\DigitalIDAppServer\src\GovDigitalApp.Application\obj\Debug\net10.0\GovDigitalApp.Application.AssemblyInfo.cs
+C:\Users\uzhva\RiderProjects\DigitalIDAppServer\src\GovDigitalApp.Application\obj\Debug\net10.0\GovDigitalApp.Application.csproj.CoreCompileInputs.cache
+C:\Users\uzhva\RiderProjects\DigitalIDAppServer\src\GovDigitalApp.Application\obj\Debug\net10.0\GovDigit.095779CD.Up2Date
+C:\Users\uzhva\RiderProjects\DigitalIDAppServer\src\GovDigitalApp.Application\obj\Debug\net10.0\GovDigitalApp.Application.dll
+C:\Users\uzhva\RiderProjects\DigitalIDAppServer\src\GovDigitalApp.Application\obj\Debug\net10.0\refint\GovDigitalApp.Application.dll
+C:\Users\uzhva\RiderProjects\DigitalIDAppServer\src\GovDigitalApp.Application\obj\Debug\net10.0\GovDigitalApp.Application.pdb
+C:\Users\uzhva\RiderProjects\DigitalIDAppServer\src\GovDigitalApp.Application\obj\Debug\net10.0\ref\GovDigitalApp.Application.dll
