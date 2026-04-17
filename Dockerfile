@@ -8,11 +8,9 @@ COPY src/GovDigitalApp.Domain/GovDigitalApp.Domain.csproj src/GovDigitalApp.Doma
 COPY src/GovDigitalApp.Infrastructure/GovDigitalApp.Infrastructure.csproj src/GovDigitalApp.Infrastructure/
 COPY tests/GovDigitalApp.IntegrationTests/GovDigitalApp.IntegrationTests.csproj tests/GovDigitalApp.IntegrationTests/
 
-RUN dotnet restore src/GovDigitalApp.API/GovDigitalApp.API.csproj
-
 COPY . .
 
-RUN dotnet publish src/GovDigitalApp.API/GovDigitalApp.API.csproj -c Release -o /app/publish --no-restore
+RUN dotnet publish src/GovDigitalApp.API/GovDigitalApp.API.csproj -c Release -o /app/publish
 
 FROM mcr.microsoft.com/dotnet/aspnet:10.0 AS runtime
 WORKDIR /app
