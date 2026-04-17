@@ -60,20 +60,13 @@ if (!app.Environment.IsDevelopment())
 app.UseAuthentication();
 app.UseAuthorization();
 app.MapControllers();
+app.MapGet("/health", () => Results.Ok("healthy"));
 
 if (!app.Environment.IsEnvironment("Testing"))
 {
     using var scope = app.Services.CreateScope();
     var db = scope.ServiceProvider.GetRequiredService<AppDbContext>();
-    try
-    {
-        _ = db.Documents.AsNoTracking().Take(0).ToList();
-    }
-    catch
-    {
-        db.Database.EnsureDeleted();
-        db.Database.EnsureCreated();
-    }
+    db.Database.EnsureCreated();
 }
 
 app.Run();

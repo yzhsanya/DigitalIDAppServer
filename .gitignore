@@ -1,0 +1,39 @@
+## Build outputs
+bin/
+obj/
+out/
+publish/
+
+## .NET
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+*.ncrunch*
+*.DotSettings.user
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+## Rider / VS
+.idea/
+.vs/
+*.swp
+*~
+
+## Runtime / logs
+*.log
+*.tmp
+*.temp
+nohup.out
+
+## Secrets — never commit these
+appsettings.Production.json
+appsettings.Staging.json
+secrets.json
+.env
+
+## NuGet
+*.nupkg
+.nuget/
+packages/
