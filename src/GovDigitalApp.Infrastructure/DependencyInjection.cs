@@ -39,15 +39,13 @@ public static class DependencyInjection
         }
         else
         {
-            var isRailway = !string.IsNullOrEmpty(Environment.GetEnvironmentVariable("RAILWAY_ENVIRONMENT"));
+            var connection = Environment.GetEnvironmentVariable("DB_CONNECTION")
+                ?? configuration.GetConnectionString("DefaultConnection")
+                ?? throw new InvalidOperationException("DB connection string not configured");
             services.AddDbContext<AppDbContext>((sp, options) =>
             {
-                if (isRailway)
-                    options.UseSqlite("Data Source=/tmp/govdigitalapp.db")
-                           .ConfigureWarnings(w => w.Ignore(RelationalEventId.PendingModelChangesWarning));
-                else
-                    options.UseSqlServer(configuration.GetConnectionString("DefaultConnection"))
-                           .ConfigureWarnings(w => w.Ignore(RelationalEventId.PendingModelChangesWarning));
+                options.UseSqlServer(connection)
+                       .ConfigureWarnings(w => w.Ignore(RelationalEventId.PendingModelChangesWarning));
             });
         }
 
