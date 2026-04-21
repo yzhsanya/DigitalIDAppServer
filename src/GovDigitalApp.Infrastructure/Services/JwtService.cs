@@ -19,7 +19,9 @@ public class JwtService : IJwtService
 
     public string GenerateToken(User user)
     {
-        var jwtKey = _configuration["Jwt:Key"] ?? throw new InvalidOperationException("JWT key not configured");
+        var jwtKey = Environment.GetEnvironmentVariable("JWT_KEY")
+            ?? _configuration["Jwt:Key"]
+            ?? throw new InvalidOperationException("JWT key not configured");
         var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(jwtKey));
         var credentials = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
 
@@ -29,13 +31,16 @@ public class JwtService : IJwtService
             new Claim(ClaimTypes.Email, user.Email),
             new Claim(ClaimTypes.GivenName, user.FirstName),
             new Claim(ClaimTypes.Surname, user.LastName),
+            new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
         };
 
+        var expiryHoursRaw = Environment.GetEnvironmentVariable("JWT_EXPIRY_HOURS") ?? _configuration["Jwt:ExpiryHours"];
+        var expiryHours = int.TryParse(expiryHoursRaw, out var parsed) ? parsed : 24;
         var token = new JwtSecurityToken(
             issuer: _configuration["Jwt:Issuer"],
             audience: _configuration["Jwt:Audience"],
             claims: claims,
-            expires: DateTime.UtcNow.AddDays(30),
+            expires: DateTime.UtcNow.AddHours(expiryHours),
             signingCredentials: credentials
         );
 

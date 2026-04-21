@@ -6,6 +6,7 @@ using GovDigitalApp.Application.Identity;
 using GovDigitalApp.Infrastructure.Persistence;
 using GovDigitalApp.Infrastructure.Services;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.DataProtection;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Diagnostics;
 using Microsoft.Extensions.Configuration;
@@ -22,14 +23,24 @@ public static class DependencyInjection
         IConfiguration configuration,
         Action<DbContextOptionsBuilder>? dbContextOptions = null)
     {
+        var keyRingPath = Environment.GetEnvironmentVariable("DP_KEY_RING")
+            ?? Path.Combine(AppContext.BaseDirectory, "dp-keys");
+        Directory.CreateDirectory(keyRingPath);
+        services.AddDataProtection()
+            .PersistKeysToFileSystem(new DirectoryInfo(keyRingPath))
+            .SetApplicationName("GovDigitalApp");
+
         if (dbContextOptions != null)
         {
-            services.AddDbContext<AppDbContext>(dbContextOptions);
+            services.AddDbContext<AppDbContext>((sp, options) =>
+            {
+                dbContextOptions(options);
+            });
         }
         else
         {
             var isRailway = !string.IsNullOrEmpty(Environment.GetEnvironmentVariable("RAILWAY_ENVIRONMENT"));
-            services.AddDbContext<AppDbContext>(options =>
+            services.AddDbContext<AppDbContext>((sp, options) =>
             {
                 if (isRailway)
                     options.UseSqlite("Data Source=/tmp/govdigitalapp.db")
@@ -50,13 +61,20 @@ public static class DependencyInjection
         services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
             .AddJwtBearer(options =>
             {
-                var jwtKey = configuration["Jwt:Key"] ?? throw new InvalidOperationException("JWT key not configured");
+                var jwtKey = Environment.GetEnvironmentVariable("JWT_KEY")
+                    ?? configuration["Jwt:Key"]
+                    ?? throw new InvalidOperationException("JWT key not configured");
+                if (jwtKey.Length < 32)
+                    throw new InvalidOperationException("JWT key must be at least 32 characters for HS256.");
+                options.RequireHttpsMetadata = !string.Equals(
+                    Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT"), "Development", StringComparison.OrdinalIgnoreCase);
                 options.TokenValidationParameters = new TokenValidationParameters
                 {
                     ValidateIssuer = true,
                     ValidateAudience = true,
                     ValidateLifetime = true,
                     ValidateIssuerSigningKey = true,
+                    ClockSkew = TimeSpan.FromMinutes(1),
                     ValidIssuer = configuration["Jwt:Issuer"],
                     ValidAudience = configuration["Jwt:Audience"],
                     IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(jwtKey)),

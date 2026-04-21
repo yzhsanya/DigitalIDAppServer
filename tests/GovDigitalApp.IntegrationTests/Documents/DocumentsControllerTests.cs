@@ -21,7 +21,7 @@ public class DocumentsControllerTests : IntegrationTestBase
     }
 
     [Fact]
-    public async Task GetDocuments_WhenAuthenticated_ReturnsEmptyList()
+    public async Task GetDocuments_WhenAuthenticated_ReturnsSeededDocuments()
     {
         var auth = await RegisterAndLoginAsync($"docs_{Guid.NewGuid()}@test.com");
         AuthorizeClient(auth.Token);
@@ -30,7 +30,8 @@ public class DocumentsControllerTests : IntegrationTestBase
 
         response.StatusCode.Should().Be(HttpStatusCode.OK);
         var documents = await response.Content.ReadFromJsonAsync<List<DocumentResponse>>();
-        documents.Should().NotBeNull().And.BeEmpty();
+        documents.Should().NotBeNull();
+        documents!.Count.Should().BeGreaterThan(0, "registration seeds starter documents for the demo wallet");
     }
 
     [Fact]

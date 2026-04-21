@@ -12,7 +12,7 @@ public class DvlaControllerTests : IntegrationTestBase
     public DvlaControllerTests(TestWebAppFactory factory) : base(factory) { }
 
     [Fact]
-    public async Task GetVehicles_WhenAuthenticated_ReturnsEmptyList()
+    public async Task GetVehicles_WhenAuthenticated_ReturnsSeededVehicle()
     {
         var auth = await RegisterAndLoginAsync($"dvla_{Guid.NewGuid()}@test.com");
         AuthorizeClient(auth.Token);
@@ -21,7 +21,8 @@ public class DvlaControllerTests : IntegrationTestBase
 
         response.StatusCode.Should().Be(HttpStatusCode.OK);
         var vehicles = await response.Content.ReadFromJsonAsync<List<VehicleResponse>>();
-        vehicles.Should().NotBeNull().And.BeEmpty();
+        vehicles.Should().NotBeNull();
+        vehicles!.Count.Should().BeGreaterThan(0, "registration seeds a starter vehicle for the DVLA demo");
     }
 
     [Fact]
