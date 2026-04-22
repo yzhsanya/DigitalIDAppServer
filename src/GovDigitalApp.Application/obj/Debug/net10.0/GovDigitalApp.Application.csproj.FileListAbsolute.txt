@@ -13,3 +13,4 @@ C:\Users\uzhva\RiderProjects\DigitalIDAppServer\src\GovDigitalApp.Application\ob
 C:\Users\uzhva\RiderProjects\DigitalIDAppServer\src\GovDigitalApp.Application\obj\Debug\net10.0\refint\GovDigitalApp.Application.dll
 C:\Users\uzhva\RiderProjects\DigitalIDAppServer\src\GovDigitalApp.Application\obj\Debug\net10.0\GovDigitalApp.Application.pdb
 C:\Users\uzhva\RiderProjects\DigitalIDAppServer\src\GovDigitalApp.Application\obj\Debug\net10.0\ref\GovDigitalApp.Application.dll
+C:\Users\uzhva\RiderProjects\DigitalIDAppServer\src\GovDigitalApp.Application\obj\Debug\net10.0\GovDigitalApp.Application.sourcelink.json

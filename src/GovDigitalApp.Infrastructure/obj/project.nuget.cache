@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "ffidncEnXFA=",
+  "dgSpecHash": "Vwee0otHNso=",
   "success": true,
   "projectFilePath": "C:\\Users\\uzhva\\RiderProjects\\DigitalIDAppServer\\src\\GovDigitalApp.Infrastructure\\GovDigitalApp.Infrastructure.csproj",
   "expectedPackageFiles": [
@@ -9,6 +9,10 @@
     "C:\\Users\\uzhva\\.nuget\\packages\\bcrypt.net-next\\4.1.0\\bcrypt.net-next.4.1.0.nupkg.sha512",
     "C:\\Users\\uzhva\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\uzhva\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\10.0.6\\microsoft.aspnetcore.authentication.jwtbearer.10.0.6.nupkg.sha512",
+    "C:\\Users\\uzhva\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\10.0.6\\microsoft.aspnetcore.cryptography.internal.10.0.6.nupkg.sha512",
+    "C:\\Users\\uzhva\\.nuget\\packages\\microsoft.aspnetcore.dataprotection\\10.0.6\\microsoft.aspnetcore.dataprotection.10.0.6.nupkg.sha512",
+    "C:\\Users\\uzhva\\.nuget\\packages\\microsoft.aspnetcore.dataprotection.abstractions\\10.0.6\\microsoft.aspnetcore.dataprotection.abstractions.10.0.6.nupkg.sha512",
+    "C:\\Users\\uzhva\\.nuget\\packages\\microsoft.aspnetcore.dataprotection.extensions\\10.0.6\\microsoft.aspnetcore.dataprotection.extensions.10.0.6.nupkg.sha512",
     "C:\\Users\\uzhva\\.nuget\\packages\\microsoft.aspnetcore.http.abstractions\\2.3.9\\microsoft.aspnetcore.http.abstractions.2.3.9.nupkg.sha512",
     "C:\\Users\\uzhva\\.nuget\\packages\\microsoft.aspnetcore.http.features\\2.3.0\\microsoft.aspnetcore.http.features.2.3.0.nupkg.sha512",
     "C:\\Users\\uzhva\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\8.0.0\\microsoft.bcl.asyncinterfaces.8.0.0.nupkg.sha512",
@@ -36,6 +40,9 @@
     "C:\\Users\\uzhva\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\10.0.6\\microsoft.extensions.dependencyinjection.10.0.6.nupkg.sha512",
     "C:\\Users\\uzhva\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\10.0.6\\microsoft.extensions.dependencyinjection.abstractions.10.0.6.nupkg.sha512",
     "C:\\Users\\uzhva\\.nuget\\packages\\microsoft.extensions.dependencymodel\\10.0.6\\microsoft.extensions.dependencymodel.10.0.6.nupkg.sha512",
+    "C:\\Users\\uzhva\\.nuget\\packages\\microsoft.extensions.diagnostics.abstractions\\10.0.6\\microsoft.extensions.diagnostics.abstractions.10.0.6.nupkg.sha512",
+    "C:\\Users\\uzhva\\.nuget\\packages\\microsoft.extensions.fileproviders.abstractions\\10.0.6\\microsoft.extensions.fileproviders.abstractions.10.0.6.nupkg.sha512",
+    "C:\\Users\\uzhva\\.nuget\\packages\\microsoft.extensions.hosting.abstractions\\10.0.6\\microsoft.extensions.hosting.abstractions.10.0.6.nupkg.sha512",
     "C:\\Users\\uzhva\\.nuget\\packages\\microsoft.extensions.logging\\10.0.6\\microsoft.extensions.logging.10.0.6.nupkg.sha512",
     "C:\\Users\\uzhva\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\10.0.6\\microsoft.extensions.logging.abstractions.10.0.6.nupkg.sha512",
     "C:\\Users\\uzhva\\.nuget\\packages\\microsoft.extensions.options\\10.0.6\\microsoft.extensions.options.10.0.6.nupkg.sha512",
@@ -66,8 +73,9 @@
     "C:\\Users\\uzhva\\.nuget\\packages\\system.diagnostics.eventlog\\9.0.4\\system.diagnostics.eventlog.9.0.4.nupkg.sha512",
     "C:\\Users\\uzhva\\.nuget\\packages\\system.identitymodel.tokens.jwt\\8.17.0\\system.identitymodel.tokens.jwt.8.17.0.nupkg.sha512",
     "C:\\Users\\uzhva\\.nuget\\packages\\system.memory.data\\8.0.1\\system.memory.data.8.0.1.nupkg.sha512",
-    "C:\\Users\\uzhva\\.nuget\\packages\\system.security.cryptography.pkcs\\9.0.4\\system.security.cryptography.pkcs.9.0.4.nupkg.sha512",
-    "C:\\Users\\uzhva\\.nuget\\packages\\system.security.cryptography.protecteddata\\9.0.4\\system.security.cryptography.protecteddata.9.0.4.nupkg.sha512"
+    "C:\\Users\\uzhva\\.nuget\\packages\\system.security.cryptography.pkcs\\10.0.6\\system.security.cryptography.pkcs.10.0.6.nupkg.sha512",
+    "C:\\Users\\uzhva\\.nuget\\packages\\system.security.cryptography.protecteddata\\9.0.4\\system.security.cryptography.protecteddata.9.0.4.nupkg.sha512",
+    "C:\\Users\\uzhva\\.nuget\\packages\\system.security.cryptography.xml\\10.0.6\\system.security.cryptography.xml.10.0.6.nupkg.sha512"
   ],
   "logs": []
 }

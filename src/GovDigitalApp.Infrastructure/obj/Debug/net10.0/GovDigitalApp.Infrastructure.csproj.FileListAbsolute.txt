@@ -17,3 +17,4 @@ C:\Users\uzhva\RiderProjects\DigitalIDAppServer\src\GovDigitalApp.Infrastructure
 C:\Users\uzhva\RiderProjects\DigitalIDAppServer\src\GovDigitalApp.Infrastructure\obj\Debug\net10.0\GovDigitalApp.Infrastructure.pdb
 C:\Users\uzhva\RiderProjects\DigitalIDAppServer\src\GovDigitalApp.Infrastructure\obj\Debug\net10.0\GovDigitalApp.Infrastructure.genruntimeconfig.cache
 C:\Users\uzhva\RiderProjects\DigitalIDAppServer\src\GovDigitalApp.Infrastructure\obj\Debug\net10.0\ref\GovDigitalApp.Infrastructure.dll
+C:\Users\uzhva\RiderProjects\DigitalIDAppServer\src\GovDigitalApp.Infrastructure\obj\Debug\net10.0\GovDigitalApp.Infrastructure.sourcelink.json

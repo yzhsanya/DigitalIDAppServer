@@ -761,6 +761,14 @@
               "target": "Package",
               "version": "[10.0.6, )"
             },
+            "Microsoft.AspNetCore.DataProtection": {
+              "target": "Package",
+              "version": "[10.0.6, )"
+            },
+            "Microsoft.AspNetCore.DataProtection.Extensions": {
+              "target": "Package",
+              "version": "[10.0.6, )"
+            },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
               "version": "[10.0.6, )"
