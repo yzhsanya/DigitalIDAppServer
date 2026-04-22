@@ -23,8 +23,9 @@ public static class DependencyInjection
         IConfiguration configuration,
         Action<DbContextOptionsBuilder>? dbContextOptions = null)
     {
+        var isRailway = !string.IsNullOrEmpty(Environment.GetEnvironmentVariable("RAILWAY_ENVIRONMENT"));
         var keyRingPath = Environment.GetEnvironmentVariable("DP_KEY_RING")
-            ?? Path.Combine(AppContext.BaseDirectory, "dp-keys");
+            ?? (isRailway ? "/tmp/dp-keys" : Path.Combine(AppContext.BaseDirectory, "dp-keys"));
         Directory.CreateDirectory(keyRingPath);
         services.AddDataProtection()
             .PersistKeysToFileSystem(new DirectoryInfo(keyRingPath))
@@ -35,6 +36,15 @@ public static class DependencyInjection
             services.AddDbContext<AppDbContext>((sp, options) =>
             {
                 dbContextOptions(options);
+            });
+        }
+        else if (isRailway)
+        {
+            var sqlitePath = Environment.GetEnvironmentVariable("SQLITE_PATH") ?? "/tmp/govdigitalapp.db";
+            services.AddDbContext<AppDbContext>((sp, options) =>
+            {
+                options.UseSqlite($"Data Source={sqlitePath}")
+                       .ConfigureWarnings(w => w.Ignore(RelationalEventId.PendingModelChangesWarning));
             });
         }
         else
